@@ -36,5 +36,8 @@ def show_two_players(data):
         print("-" * 30)
         time.sleep(1)
         os.system(delete)
+        print("-" * 30)
+        print("Two players comparison")
+        print("-" * 30)
         show_player(player_one)
         show_player(player_two)
