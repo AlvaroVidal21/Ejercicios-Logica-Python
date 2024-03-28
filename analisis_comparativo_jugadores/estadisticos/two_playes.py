@@ -1,11 +1,15 @@
-def show_player(player):
-    print(f"Name: {player['jugador']}")
-    print(f"Jersey Number: {player['jersey_number']}")
-    print(f"Goals: {player["goals"]}")
-    print(f"Assists: {player["assists"]}")
-    print(f"Passing accuracy: {player["passing_accuracy"]}")
-    print(f"Defensive involvments: {player["defensive_involvements"]}")
-    print("-" * 30)
+import platform
+import time
+import os
+from .show_players import show_player
+
+
+# Operative System
+sistema_operativo = platform.system()
+if sistema_operativo == "Linux":
+    delete = "clear"
+elif sistema_operativo == "Windows":
+    delete = "cls"
 
 
 
@@ -30,5 +34,7 @@ def show_two_players(data):
         print("\nPlayer two not found")
     else:
         print("-" * 30)
+        time.sleep(1)
+        os.system(delete)
         show_player(player_one)
         show_player(player_two)

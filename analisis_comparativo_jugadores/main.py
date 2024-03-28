@@ -6,6 +6,7 @@ from menu.interfaz import interfaz
 from estadisticos.show_all_players import show_all_players
 from estadisticos.read_json import read_json_fn
 from estadisticos.two_playes import show_two_players
+from estadisticos.statistics import fastest_player
 
 
 # Path::data
@@ -32,9 +33,15 @@ def doing():
             show_all_players(data)
 
         elif option == 2:
+            time.sleep(1)
+            show_two_players(data) 
+        elif option == 4:
             time.sleep(2)
             os.system(delete)
-            show_two_players(data)  
+            print("-" * 30)
+            print("Fastest player")
+            print("-" * 30)
+            fastest_player(data)
         else:
             print("Option not available")
             time.sleep(2)
