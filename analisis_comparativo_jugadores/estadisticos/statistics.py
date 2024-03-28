@@ -18,3 +18,20 @@ def fastest_player(data):
     for p in most_speed_players:
         show_player(p)
 
+
+def most_assists(data):
+    most_assists_list = []
+    most_assists_players = []
+
+    for player in data:
+        most_assists_list.append(player['assists'])
+
+    mosts_assists = max(most_assists_list)
+
+    for player in data:
+        if player['assists'] == mosts_assists:
+            most_assists_players.append(player)
+    
+    for p in most_assists_players:
+        show_player(p)
+

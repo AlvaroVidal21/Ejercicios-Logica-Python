@@ -7,7 +7,7 @@ from estadisticos.show_all_players import show_all_players
 from estadisticos.read_json import read_json_fn
 from estadisticos.one_player import show_one_player
 from estadisticos.two_playes import show_two_players
-from estadisticos.statistics import fastest_player
+from estadisticos.statistics import fastest_player, most_assists
 
 
 # Path::data
