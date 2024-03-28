@@ -19,6 +19,7 @@ elif sistema_operativo == "Windows":
 
 
 def doing():
+    print("Loading...")
     data = read_json_fn(TRACK)
     option = interfaz()
     if option == 1:
