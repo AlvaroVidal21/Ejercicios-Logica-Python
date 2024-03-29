@@ -35,3 +35,55 @@ def most_assists(data):
     for p in most_assists_players:
         show_player(p)
 
+
+def most_goals(data):
+    most_goals_list = []
+    most_goals_players = []
+
+    for player in data:
+        most_goals_list.append(player['goals'])
+
+    most_goals = max(most_goals_list)
+
+    for player in data:
+        if player['goals'] == most_goals:
+            most_goals_players.append(player)
+    
+    for p in most_goals_players:
+        show_player(p)
+
+
+def most_passing_accuracy(data):
+    most_passing_accuracy_list = []
+    most_passing_accuracy_players = []
+
+    for player in data:
+        most_passing_accuracy_list.append(player['passing_accuracy'])
+
+    most_passing_accuracy = max(most_passing_accuracy_list)
+
+    for player in data:
+        if player['passing_accuracy'] == most_passing_accuracy:
+            most_passing_accuracy_players.append(player)
+    
+    for p in most_passing_accuracy_players:
+        show_player(p)
+
+
+def most_defensive_involvements(data):
+    most_defensive_involvements_list = []
+    most_defensive_involvements_players = []
+
+    for player in data:
+        most_defensive_involvements_list.append(player['defensive_involvements'])
+
+    most_defensive_involvements = max(most_defensive_involvements_list)
+
+    for player in data:
+        if player['defensive_involvements'] == most_defensive_involvements:
+            most_defensive_involvements_players.append(player)
+    
+    for p in most_defensive_involvements_players:
+        show_player(p)
+
+        

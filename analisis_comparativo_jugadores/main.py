@@ -7,7 +7,7 @@ from estadisticos.show_all_players import show_all_players
 from estadisticos.read_json import read_json_fn
 from estadisticos.one_player import show_one_player
 from estadisticos.two_playes import show_two_players
-from estadisticos.statistics import fastest_player, most_assists
+from estadisticos.statistics import fastest_player, most_assists, most_goals, most_passing_accuracy, most_defensive_involvements
 
 
 # Path::data
@@ -51,6 +51,34 @@ def doing():
             print("Fastest player")
             print("-" * 30)
             fastest_player(data)
+        elif option == 5:
+            time.sleep(2)
+            os.system(delete)
+            print("-" * 30)
+            print("Most assists")
+            print("-" * 30)
+            most_assists(data)
+        elif option == 6:
+            time.sleep(2)
+            os.system(delete)
+            print("-" * 30)
+            print("Most goals")
+            print("-" * 30)
+            most_goals(data)
+        elif option == 7:
+            time.sleep(2)
+            os.system(delete)
+            print("-" * 30)
+            print("Most passing accuracy")
+            print("-" * 30)
+            most_passing_accuracy(data)
+        elif option == 8:
+            time.sleep(2)
+            os.system(delete)
+            print("-" * 30)
+            print("Most defensive involvements")
+            print("-" * 30)
+            most_defensive_involvements(data)
         else:
             print("Option not available")
             time.sleep(2)
