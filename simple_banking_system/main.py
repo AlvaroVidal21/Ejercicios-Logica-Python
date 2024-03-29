@@ -1,5 +1,5 @@
 from iu.welcome import print_welcome
-
+from login.register import register_new_user
 
 
 
@@ -13,7 +13,7 @@ from iu.welcome import print_welcome
 
 
 def doing():
-    print_welcome()
+    register_new_user()
 
 
 
