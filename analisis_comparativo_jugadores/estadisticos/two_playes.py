@@ -27,7 +27,7 @@ def show_two_players(data):
             player_two = player
 
     if player_one == {} and player_two == {}:
-        print("\Player one and two not found")
+        print("\nPlayer one and two not found")
     elif player_one == {}:
         print("\nPlayer one not found")
     elif player_two == {}:
