@@ -31,7 +31,10 @@ def doing():
         status, user_logged = login_user_fn(read_json_fn, track)
         time.sleep(1.5)
         os.system(delete)
-        iu_user_fn(user_logged, read_json_fn, write_json_fn, track)
+        if status:
+            iu_user_fn(user_logged, read_json_fn, write_json_fn, track)
+        else:
+            print("Adiós, vuelva otro día")
     elif opcion_de_usuario == 2:
         nombre, apellido, dni, user, password = register_new_user()
         add_new_user(nombre, apellido, dni, user, password, read_json_fn, write_json_fn, track)
