@@ -3,8 +3,9 @@
         "id": 0,
         "user": "alvi165",
         "password": "123456",
-        "nombre": "alvaro",
+        "nombre": "alva",
         "apellido": "vidal",
-        "dni": 72783165
+        "dni": 72783165,
+        "saldo": 0
     }
 ]

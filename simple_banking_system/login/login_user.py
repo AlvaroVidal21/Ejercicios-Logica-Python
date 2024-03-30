@@ -11,7 +11,7 @@ def login_user_fn(read_json_fn, track):
     for user_data in data:
         if user_data["user"] == user and user_data["password"] == password:
             print("Bienvenido")
-            return True
+            return (True, user_data)
         else:
             print("Usuario o contraseña incorrectos")
             attemps += 1

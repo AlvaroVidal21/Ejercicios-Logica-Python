@@ -9,7 +9,8 @@ def add_new_user(nombre, apellido, dni, user, password, read_json_fn, write_json
         "password": password,
         "nombre": nombre,
         "apellido": apellido,
-        "dni": dni
+        "dni": dni,
+        "saldo": 0
     }
     data.append(new_user)
     write_json_fn(data, track)
