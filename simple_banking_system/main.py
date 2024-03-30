@@ -6,6 +6,8 @@ from iu.iu_user import iu_user_fn
 from login.register import register_new_user
 from login.add_user_to_data import add_new_user
 from login.login_user import login_user_fn
+# ACTIONS
+from actions.user_actions import depositar
 # JSON
 from controller_json.read_json import read_json_fn
 from controller_json.write_json import write_json_fn
@@ -32,7 +34,12 @@ def doing():
         time.sleep(1.5)
         os.system(delete)
         if status:
-            iu_user_fn(user_logged, read_json_fn, write_json_fn, track)
+            print(f"user logged: {user_logged}")
+            option_user = iu_user_fn(user_logged, read_json_fn, write_json_fn, track)
+            time.sleep(1.5)
+            os.system(delete)
+            if option_user == 1:
+                depositar(user_logged, read_json_fn, write_json_fn, track)
         else:
             print("Adiós, vuelva otro día")
     elif opcion_de_usuario == 2:

@@ -1,11 +1,1 @@
-[
-    {
-        "id": 0,
-        "user": "alvi165",
-        "password": "123456",
-        "nombre": "alva",
-        "apellido": "vidal",
-        "dni": 72783165,
-        "saldo": 0
-    }
-]
+[{"id": 0, "user": "alvi165", "password": "123456", "nombre": "alva", "apellido": "vidal", "dni": 72783165, "saldo": 500.0}]

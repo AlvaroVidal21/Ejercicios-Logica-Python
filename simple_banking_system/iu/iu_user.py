@@ -1,6 +1,6 @@
 
 
-def iu_user_fn(user_logged, read_json, write_json, track):
+def iu_user_fn(user_logged, read_json, write_json, track) -> int:
     data = read_json(track)
     head = f"Bienvenido {user_logged['nombre']}"
     print(head)
