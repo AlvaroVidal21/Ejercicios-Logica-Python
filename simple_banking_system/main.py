@@ -53,7 +53,11 @@ def doing():
 
                 time.sleep(1.5)
                 os.system(delete)
-                repeat()
+                
+                if repeat() == None:
+                    time.sleep(1.5)
+                    os.system(delete)
+                    break
                 
 
                 first_time += 1
