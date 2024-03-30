@@ -1,5 +1,19 @@
 
 
+def repeat():
+    print("Desea realizar otra operación?")
+    print("1. Si")
+    print("2. Salir")
+    option = int(input("Ingrese una opción: "))
+
+    if option == 1:
+        print("\n")
+    elif option == 2:
+        print("Adiós, vuelva otro día")
+        return None
+
+
+
 def depositar(user_name, read_json, write_json, track):
     data = read_json(track)
     deposito = float(input("Ingrese el monto a depositar: "))

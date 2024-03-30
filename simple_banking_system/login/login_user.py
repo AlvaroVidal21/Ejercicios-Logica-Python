@@ -1,6 +1,7 @@
+import os
+import time
 
-
-def login_user_fn(read_json_fn, track, attemps= 0):
+def login_user_fn(read_json_fn, track, delete, attemps= 0):
     if attemps == 3:
         print("Demasiados intentos fallidos")
         return (False, None)
@@ -14,4 +15,6 @@ def login_user_fn(read_json_fn, track, attemps= 0):
         else:
             print("Usuario o contraseña incorrectos")
             attemps += 1
+            time.sleep(1)
+            os.system(delete)
             return login_user_fn(read_json_fn, track, attemps)
