@@ -1,18 +1,10 @@
 [
     {
         "id": 0,
-        "user": "AlVi165",
+        "user": "alvi165",
         "password": "123456",
-        "nombre": "Alvaro",
-        "apellido": "Vidal",
-        "dni": 72783165
-    },
-    {
-        "id": 2,
-        "user": "AlVi165",
-        "password": "123456",
-        "nombre": "Alvaro",
-        "apellido": "Vidal",
+        "nombre": "alvaro",
+        "apellido": "vidal",
         "dni": 72783165
     }
 ]
