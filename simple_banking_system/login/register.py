@@ -24,11 +24,15 @@ def register_new_user():
     dni = int(input("Ingrese su DNI: "))
     time.sleep(1)
     os.system(delete)
+    password = input("Ingrese su contraseña: ")
+    time.sleep(1)
+    os.system(delete)
     
     while True:
         print(f"Nombre: {nombre}")
         print(f"Apellido: {apellido}")
         print(f"DNI: {dni}")
+        print(f"Contraseña: {password}")
         print("-" * len("Registro de usuario"))
         print("¿Están correctos los datos?")
         print("1. Sí")
@@ -48,6 +52,6 @@ def register_new_user():
             time.sleep(1)
             os.system(delete)
 
-    user = nombre[:2] + apellido[:2] + str(dni[-3])   
+    user = nombre[:2] + apellido[:2] + str(dni)[-3:]
 
-    return (nombre, apellido, dni, user)
+    return (nombre, apellido, dni, user, password)
