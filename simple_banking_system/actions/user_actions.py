@@ -6,11 +6,11 @@ def repeat():
     print("2. Salir")
     option = int(input("Ingrese una opción: "))
 
-    if option == 1:
-        print("\n")
-    elif option == 2:
+    if option == 2:
         print("Adiós, vuelva otro día")
         return None
+    else:
+        return True
 
 
 

@@ -28,6 +28,7 @@ def doing():
     track = "users/all_users.json"
     opcion_de_usuario = print_welcome()
 
+    # INGRESAR AL SISTEMA 
     if opcion_de_usuario == 1:
         status, user_logged = login_user_fn(read_json_fn, track, delete)
         time.sleep(1.5)
@@ -58,6 +59,11 @@ def doing():
                     time.sleep(1.5)
                     os.system(delete)
                     break
+                else:
+                    time.sleep(1.5)
+                    print("\nContinuando...")
+                    os.system(delete)
+                    continue
                 
 
                 first_time += 1
@@ -66,7 +72,8 @@ def doing():
 
         else:
             print("Adiós, vuelva otro día")
-            
+
+    # REGISTRAR USUARIO NUEVO 
     elif opcion_de_usuario == 2:
         nombre, apellido, dni, user, password = register_new_user()
         add_new_user(nombre, apellido, dni, user, password, read_json_fn, write_json_fn, track)

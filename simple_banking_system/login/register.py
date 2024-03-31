@@ -54,4 +54,7 @@ def register_new_user():
 
     user = nombre[:2] + apellido[:2] + str(dni)[-3:]
 
+    print(f"\nTu usuario es: {user}\n")
+    time.sleep(5)
+
     return (nombre, apellido, dni, user, password)

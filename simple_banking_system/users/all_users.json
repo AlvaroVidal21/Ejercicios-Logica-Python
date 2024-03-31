@@ -1,1 +1,20 @@
-[{"id": 0, "user": "alvi165", "password": "123456", "nombre": "alva", "apellido": "vidal", "dni": 72783165, "saldo": 4500.0}, {"id": 2, "user": "shvi706", "password": "123456", "nombre": "sherlock", "apellido": "vidal", "dni": 9066706, "saldo": 2000.0}]
+[
+    {
+        "id": 0,
+        "user": "alvi165",
+        "password": "123456",
+        "nombre": "alvaro",
+        "apellido": "vidal",
+        "dni": 72783165,
+        "saldo": 500.0
+    },
+    {
+        "id": 1,
+        "user": "shvi706",
+        "password": "12",
+        "nombre": "sherlock",
+        "apellido": "vidal",
+        "dni": 9060706,
+        "saldo": 1500.0
+    }
+]
