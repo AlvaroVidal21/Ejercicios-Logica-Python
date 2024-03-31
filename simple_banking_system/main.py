@@ -39,7 +39,7 @@ def doing():
                 if first_time > 0:
                     os.system(delete)
                 
-                option_user = iu_user_fn(user_logged, read_json_fn, write_json_fn, track)
+                option_user = iu_user_fn(user_logged, read_json_fn, track)
                 time.sleep(1.5)
                 os.system(delete)
                 if option_user == 1:
@@ -61,7 +61,7 @@ def doing():
                     break
                 else:
                     time.sleep(1.5)
-                    print("\nContinuando...")
+                    print("\nContinuando...\n")
                     os.system(delete)
                     continue
                 

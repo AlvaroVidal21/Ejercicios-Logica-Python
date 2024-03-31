@@ -1,6 +1,6 @@
 
 
-def iu_user_fn(user_logged, read_json, write_json, track) -> int:
+def iu_user_fn(user_logged, read_json, track) -> int:
     data = read_json(track)
     #Para que sea actulice la información del usuario en pantalla
     for user in data:

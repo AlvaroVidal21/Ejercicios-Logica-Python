@@ -24,7 +24,7 @@ def depositar(user_name, read_json, write_json, track):
             break
 
     write_json(data, track)
-    print("Todo correcto compa")
+    print("\nDepósito realizado con éxito\n")
 
 
 def retirar(user_name, read_json, write_json, track):
@@ -35,9 +35,10 @@ def retirar(user_name, read_json, write_json, track):
         if user['user'] == user_name['user']:
             if user['saldo'] >= retiro:
                 user['saldo'] -= retiro
+                print("\nRetiro realizado con éxito\n")
                 break
             else:
-                print("Saldo insuficiente")
+                print("\nSaldo insuficiente\n")
                 break
 
     write_json(data, track)
@@ -68,7 +69,7 @@ def transferir(user_name, read_json, write_json, track):
         
     if usuario_encontrado:
         write_json(data, track)
-        print("Transferencia realizada con éxito")
+        print("\nTransferencia realizada con éxito\n")
     else:
-        print("Usuario no encontrado")
+        print("\nUsuario no encontrado\n")
 

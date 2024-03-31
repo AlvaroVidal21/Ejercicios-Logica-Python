@@ -8,6 +8,7 @@ def login_user_fn(read_json_fn, track, delete, attemps= 0):
         print("Demasiados intentos fallidos")
         return (False, None)
     data = read_json_fn(track)
+    print("-" * 20)
     user = input("Ingrese su usuario: ").strip()
     password = input("Ingrese su contraseña: ").strip()
     for user_data in data:
