@@ -19,7 +19,9 @@ def interface_iu_input(data: list) -> str:
 
 def interface_iu_output(input_exchange: str, data: list) -> str:
     print("Foreing exchange system")
-    print("\nhoose an exchange: ")
+    print("\nChoose an exchange: ")
+    print(f"Chosen exchange: {input_exchange}\n")
+    print("-" * (len("Chosen exchange: {input_exchange}\n")))
     data_to_print = data.copy()
     data_to_print.pop(input_exchange)
 
