@@ -1,5 +1,5 @@
 # IMPORTS
-
+import sys
 
 def interface_iu_input(data: list) -> str:
     """
@@ -54,11 +54,10 @@ def interface_iu_size_exchange(input_exchange: str, output_exchange: str) -> flo
     """
     print("Foreing exchange system")
     print("\nChoose an exchange: ")
-    print(f"Chosen exchange: {input_exchange} to {output_exchange}\n")
-    print(
-        "-" * (len("Chosen exchange: {input_exchange} to {output_exchange}\n")))
-    exchange_size = float(
-        input("Enter the amount of money you want to exchange: "))
+    negrita = "\033[1m" + input_exchange + " to " + output_exchange + "\033[0m"
+    print(f"Chosen exchange: {negrita}\n")
+    print("-" * (len("Chosen exchange: {input_exchange} to {output_exchange}\n")))
+    exchange_size = float(input("Enter the amount of money you want to exchange: "))
 
     return exchange_size
 
@@ -70,5 +69,7 @@ def interface_completed(input_exchange: str, output_exchange: str, exchange_size
     print("Foreing exchange system")
     print("\nChoose an exchange: ")
     print(f"Chosen exchange: {input_exchange} to {output_exchange}\n")
+    print("-" * len(f"Amount to exchange: {exchange_size}"))
     print(f"Amount to exchange: {exchange_size}")
     print(f"Amount exchanged: {exchange}")
+    print("-" * len(f"Amount to exchange: {exchange_size}"))
