@@ -1,5 +1,5 @@
 # INTERFACE
-from iu_user.interface import interface_iu_input, interface_iu_output, interface_iu_size_exchange, interface_completed
+from iu_user.interface import interface_iu_input, interface_iu_output, interface_iu_size_exchange, interface_completed, loading_fn, accepted_rate
 # DATA
 from data_exchanges.data import exchange_data_usd
 # FUNCTIONS
@@ -34,8 +34,12 @@ def doing():
     time.sleep(1)
     os.system(delete)
     # Realizamos el intercambio e imprimos todo en pantalla
-    exchange = exchange_to_dollars(input_user, output_user, size_exchange, data)
+    exchange, rate, exchange_rate = exchange_to_dollars(input_user, output_user, size_exchange, data)
     interface_completed(input_user, output_user, size_exchange, exchange)
+    time.sleep(3)
+    accepted_rate(size_exchange, exchange, rate, exchange_rate, loading_fn, delete)
+    time.sleep(1)
+
 
 
     
