@@ -1,0 +1,16 @@
+[
+    {
+        "user": "alva",
+        "password": "123",
+        "programa": "informatica",
+        "ciudad": "manchester",
+        "estatus_matricula": true
+    },
+    {
+        "user": "sherlock",
+        "password": "999",
+        "programa": "",
+        "ciudad": "",
+        "estatus_matricula": false
+    }
+]
