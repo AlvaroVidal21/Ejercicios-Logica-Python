@@ -1,30 +1,29 @@
 # IMPORTS
 import os
 
-# CIUDAD
-
-
+# CIUDADES
 def escoger_ciudad(path, read_json_fn):
     data = read_json_fn(path)
     cities = []
     cities_index = {}
+
     for element in data:
         for city in element.keys():
             cities.append(city)
 
+    print("Ciudades disponibles: \n")
     for index, city in enumerate(cities):
         index += 1
         print(f"{index}. {city}")
         cities_index[index] = city
 
+    print("_" * len("Escoge una ciudad: "))
     option = int(input("Escoge una ciudad: "))
     city_chosen = cities_index[option]
 
     return city_chosen
 
-# PROGRAMA
-
-
+# PROGRAMAS
 def escoger_programas(path, read_json_fn):
     data = read_json_fn(path)
     programs = []
@@ -32,16 +31,9 @@ def escoger_programas(path, read_json_fn):
 
     print("Programas disponibles: \n")
 
-    # for element in data:
-    #     for city in element.keys():
-    #         for program in element[city]:
-    #             print(program)
-    #             programs.append(program)
-
     for element in data:
         for program in element['londres'].keys():
             programs.append(program)
-        
 
     for index, program in enumerate(programs):
         index += 1
@@ -61,7 +53,6 @@ def analizar_opciones(usuario_logeado, program_chosen, city_chosen, path_program
     os.system(delete)
     data_programas = read_json_fn(path_programas)
     data_usuarios = read_json_fn(path_usuarios)
-    
 
     cupos_campus = data_programas[0][city_chosen][program_chosen]["cupos_campus"]
     cupos_programa = data_programas[0][city_chosen][program_chosen]["cupos_programa"]

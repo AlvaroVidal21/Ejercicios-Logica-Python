@@ -2,7 +2,6 @@ import os
 import time
 
 
-
 def login_user_fn(read_json_fn, track, delete, attemps= 0):
     if attemps == 3:
         print("Demasiados intentos fallidos")
