@@ -19,15 +19,13 @@ if __name__ == '__main__':
 
     option = interface_login_fn(clean_interface_fn)
     if option == 1:
-        login_account_fn(read_json_fn, USER_DATA, clean_interface_fn)
+        status_login = login_account_fn(read_json_fn, USER_DATA, clean_interface_fn)
     elif option == 2:
         create_account_fn(read_json_fn, write_json_fn, USER_DATA, clean_interface_fn)
     else:
         exit()
 
+    clean_interface_fn(1)
     
-    # create_account_fn(read_json_fn, write_json_fn, USER_DATA, clean_interface_fn)
+    
 
-    login_account_fn(read_json_fn, USER_DATA, clean_interface_fn)
-
-    # test("jose", read_json_fn, USER_DATA)

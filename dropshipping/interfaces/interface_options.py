@@ -20,3 +20,5 @@ def interface_options_fn():
     except ValueError:
         print("⚠️ Opción inválida\n")
         exit()
+
+    return option
