@@ -2,9 +2,21 @@ import getpass
 
 
 def create_account_fn(read_json_fn, write_json_fn, file_path, clean): 
+
+    """
+    Solo permite 2 itentos para crear la cuenta,
+    en caso sea creada la cuenta con éxito se ejecuta la fn login
+    """
+
     data = read_json_fn(file_path)
+    attemps = 2
 
     while True:
+        if attemps == 0:
+            print("Demasiados intentos fallidos")
+            exit()
+        
+        print(f"👉 Intentos: {attemps}")
         username = input('Enter username: ')
         password = getpass.getpass('Enter password: ')
 
@@ -18,6 +30,8 @@ def create_account_fn(read_json_fn, write_json_fn, file_path, clean):
             break
 
         elif option == 2:
+            attemps -= 1
+            
             print("Reiniciando...")
             clean(1.5)
             continue
