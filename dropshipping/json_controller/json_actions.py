@@ -2,7 +2,7 @@
 import json
 import os
 
-def read_json(file_path):
+def read_json_fn(file_path):
     if not os.path.isfile(file_path):
         with open(file_path, 'w') as file:
             json.dump([], file)
@@ -13,6 +13,6 @@ def read_json(file_path):
     return data
 
 
-def write_json(data, file_path):
+def write_json_fn(data, file_path):
     with open(file_path, 'w') as file:
         json.dump(data, file)

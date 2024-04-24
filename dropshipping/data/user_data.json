@@ -1,0 +1,26 @@
+[
+    {
+        "user": "alva",
+        "password": "3603011",
+        "paquetes_activos": 0,
+        "paquetes_enviados": 0
+    },
+    {
+        "user": "jose",
+        "password": "123456",
+        "paquetes_activos": 0,
+        "paquetes_enviados": 0
+    },
+    {
+        "user": "joe",
+        "password": "1",
+        "paquetes_activos": 0,
+        "paquetes_enviados": 0
+    },
+    {
+        "user": "alva",
+        "password": "123123",
+        "paquetes_activos": 0,
+        "paquetes_enviados": 0
+    }
+] 
