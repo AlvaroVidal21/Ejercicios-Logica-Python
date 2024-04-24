@@ -1,5 +1,4 @@
 
-
 def interface_login_fn(clean_interface_fn, attemps = 3):
 
     if attemps == 0:
@@ -26,5 +25,7 @@ def interface_login_fn(clean_interface_fn, attemps = 3):
         print("⚠️ Ingrese un número válido\n")
         clean_interface_fn(2)
         interface_login_fn(clean_interface_fn, attemps-1)
+
+    return option
 
 
