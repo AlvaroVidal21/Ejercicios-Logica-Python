@@ -8,3 +8,4 @@ Los requerimientos son:
   - La comisión es una número aleatorio flotante, lo cuál se consigue con `random.uniform()` de la librería **random**.
 - Interface
   - Toda la interfaz está en línea de terminal.
+  - Hay un script sencillo de carga.
