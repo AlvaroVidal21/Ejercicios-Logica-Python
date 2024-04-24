@@ -11,8 +11,8 @@ def interface_confirm_fn(total_cost, fecha_envio, fecha_llegada, attemps = 2):
     print(f"Costo total: ${total_cost}")
     print(f"Fecha de envío: {fecha_envio}")
     print(f"Fecha de llegada: {fecha_llegada}")
-    print(f"-" * len("¿Desea confirmar el envío?\n"))
-    print("1. Confirmar")
+    print(f"-" * len("¿Desea confirmar el envío?"))
+    print("\n1. Confirmar")
     print("2. Cancelar")
 
     try:

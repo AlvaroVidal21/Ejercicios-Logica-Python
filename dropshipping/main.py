@@ -10,12 +10,14 @@ from login.create_account import *
 # FEATURES
 from features.clean_interface import *
 from features.tracker_generator import *
+from features.add_csv import *
 # ACTIONS
 from actions.cost_value import *
 from actions.calculate_date import *
 
 #PATHS
 USER_DATA  = 'data/user_data.json'
+CSV_DATA = 'data/csv_data.csv'
 
 # CONSTANTES
 COSTO_POR_KG = 2.5
@@ -32,7 +34,7 @@ if __name__ == '__main__':
     if option == 1:
         user_name = login_account_fn(read_json_fn, USER_DATA, clean_interface_fn)
     elif option == 2:
-        create_account_fn(read_json_fn, write_json_fn, USER_DATA, clean_interface_fn)
+        user_name = create_account_fn(read_json_fn, write_json_fn, USER_DATA, clean_interface_fn)
     else:
         exit()
 
@@ -62,7 +64,10 @@ if __name__ == '__main__':
         option = interface_confirm_fn(total_cost, fecha_envio, fecha_llegada)
         # Confirmar envío
         if option == 1:
-            pass # Enviar datos a csv
+            print("Paquete enviado")
+            # Exportar a CSV
+            create_csv_file(CSV_DATA)
+            export_csv(user_name, addressee_details_list, weight, total_cost, fecha_envio, fecha_llegada, CSV_DATA)
         else:
             clean_interface_fn(2)
             print("Envío cancelado")

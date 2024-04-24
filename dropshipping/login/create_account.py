@@ -20,11 +20,14 @@ def create_account_fn(read_json_fn, write_json_fn, file_path, clean):
         username = input('Enter username: ')
         password = getpass.getpass('Enter password: ')
 
+        # Interface
         clean(1.5)
         print('Confirm your new account:')
         print('-' * len('Confirm your new account:'))
         print(f"Account: {username}\nPassword: {password}")
         print(f"\n1. Confirmar\n2. Cancelar\n3. Salir\n")
+
+
         option = int(input('Option: '))
         if option == 1:
             break
@@ -49,6 +52,8 @@ def create_account_fn(read_json_fn, write_json_fn, file_path, clean):
         }
     data.append(new_user)
     write_json_fn(data, file_path)
+
+    return username
 
 def login_account_fn(read_json_fn, file_path, clean, attemps=3):
     # Carga
