@@ -19,5 +19,7 @@ Los requerimientos son:
     - Uso la librería **datetime**.
 - Interface
     - Es solo línea de comando.
+- Excepciones
+  - El programa trata de salvaguardar la integridad del flujo mediante excepciones (try-except) y condicionales (ifelse).
 
 *PD: Tengo poco tiempo estudiando seriamente programación, espero que sea del agrado mi código. Posiblemente lo mejore estos retos a través del tiempo*
