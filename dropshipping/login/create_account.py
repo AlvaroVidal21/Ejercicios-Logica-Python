@@ -76,22 +76,14 @@ def login_account_fn(read_json_fn, file_path, clean, attemps=3):
     for user in data:
         if user['user'] == user_name and user['password'] == password:
             status_login = True
-            return status_login
+            return user_name
         
         
-    login_account_fn(read_json_fn, file_path, clean, attemps-1)
+    return login_account_fn(read_json_fn, file_path, clean, attemps-1)
         
 
         
-def test(usuario, read_json_fn, file_path):
 
-    data = read_json_fn(file_path)
-
-    for user in data:
-        if usuario == user['user']:
-            print("Usuario encontrado")
-            break
-    
 
 
 
