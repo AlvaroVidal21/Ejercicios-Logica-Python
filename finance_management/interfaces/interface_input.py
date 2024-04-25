@@ -1,6 +1,6 @@
 
 
-def interface_input_fn(attemps = 2):
+def interface_input_fn(clean_interface_fn, time, attemps = 2):
 
     if attemps == 0:
         print("Demasiados intentos fallidos.")
@@ -17,7 +17,8 @@ def interface_input_fn(attemps = 2):
         return income
     except ValueError:
         print("Por favor, ingrese un número.")
-        interface_input_fn(attemps - 1)
+        clean_interface_fn(time)
+        interface_input_fn(clean_interface_fn, time, attemps - 1)
 
 
 

@@ -22,9 +22,10 @@ def add_input_fn(attemps = 2):
         add_input_fn(attemps -1)
 
 
-def add_category_fn(read_json_fn, file_path, attemps = 2):
+def add_category_fn(read_json_fn, file_path, clean_interface_fn, time ,attemps = 2):
     """
-    Retonar la categoria escogida por el usuario.
+    Muestra las categorías disponibles y permite al usuario escoger una.
+    Retona la categoria escogida por el usuario.
     """
 
     if attemps == 0:
@@ -54,6 +55,7 @@ def add_category_fn(read_json_fn, file_path, attemps = 2):
         return categoria
     except (ValueError, KeyError):
         print("Por favor, ingrese un número válido.")
+        clean_interface_fn(time)
         add_category_fn(read_json_fn, file_path, attemps - 1)
 
     

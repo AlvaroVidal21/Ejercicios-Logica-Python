@@ -4,8 +4,11 @@ def interface_general_evaluation(result, total_income, total_expenses):
     mensaje = "Evaluación final"
     print("="*len(mensaje))
     print(mensaje)
+    print("")
     print(f"Total de ingresos: {total_income}")
     print(f"Total de gastos: {total_expenses}")
+    print("="*len(mensaje))
+    print("Conclusión: ")
     print(result)
     print("="*len(mensaje))
     

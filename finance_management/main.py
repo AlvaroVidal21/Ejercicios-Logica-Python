@@ -27,16 +27,22 @@ DATA = "data/data.json"
 def ingresar_gastos():
     clean_interface_fn(1)
     expense = add_input_fn()
-    category = add_category_fn(read_json_fn, DATA)
+    category = add_category_fn(read_json_fn, DATA, clean_interface_fn, 2)
     add_expense_fn(category, expense, read_json_fn, write_json_fn, DATA)
     clean_interface_fn(2)
 
 
 
 if __name__ == '__main__':
+    # Backend
+    if os.path.exists(DATA):
+        os.remove(DATA)
     create_categories_fn(read_json_fn, write_json_fn, DATA)
     clean_interface_fn(1)
-    total_income = interface_input_fn()
+    # ----------------------------------------------------------
+
+    # Frontend
+    total_income = interface_input_fn(clean_interface_fn, 2)
     ingresar_gastos()
     while True:
         print("¿Desea agregar otro gasto? (s/n)")
@@ -46,7 +52,8 @@ if __name__ == '__main__':
         elif option == "n":
             break
         else:
-            print("Opción no válida.")
+            print("\nOpción no válida.")
+    # ----------------------------------------------------------
 
     # Calcular estadísticas
     result, total_income, total_expenses = general_evaluation(extract_data, total_income, read_json_fn, DATA)
@@ -62,9 +69,7 @@ if __name__ == '__main__':
     os.remove(DATA)
     exit()
 
-    
-    
-    # os.remove(DATA)
+
 
     
     
