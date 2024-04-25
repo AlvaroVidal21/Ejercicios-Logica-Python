@@ -2,6 +2,7 @@
 import os
 # INTERFACES
 from interfaces.interface_input import *
+from interfaces.interface_statistics import *
 
 # FEATURES
 from features.clean_interface import *
@@ -13,6 +14,9 @@ from json_actions.json_actions import *
 from actions.add_input import *
 from actions.write_data import *
 from actions.add_expense import *
+
+# STATISTICS
+from statistics.eda import *
 
 
 # FILES PATH
@@ -44,8 +48,17 @@ if __name__ == '__main__':
         else:
             print("Opción no válida.")
 
-    # Ver estadísticas
+    # Calcular estadísticas
+    result, total_income, total_expenses = general_evaluation(extract_data, total_income, read_json_fn, DATA)
+    mean_list = mean_by_category(extract_data, read_json_fn, DATA)
+    # Mostrar estadísticas en pantalla
+    clean_interface_fn(2)
+    interface_general_evaluation(result, total_income, total_expenses)
+    print("\n")
+    interface_means(mean_list)
+    # Salida
     print("Gracias por usar el sistema de finanzas.")
+    input("Presione enter para salir...")
     os.remove(DATA)
     exit()
 
