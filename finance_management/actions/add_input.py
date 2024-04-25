@@ -1,6 +1,9 @@
 
 
 def add_input_fn(attemps = 2):
+    """
+    Retona el valor de gasto ingresado por el usuario.
+    """
     
     if attemps == 0:
         print("Demasiados intentos fallidos.")
@@ -20,6 +23,9 @@ def add_input_fn(attemps = 2):
 
 
 def add_category_fn(read_json_fn, file_path, attemps = 2):
+    """
+    Retonar la categoria escogida por el usuario.
+    """
 
     if attemps == 0:
         print("Demasiados intentos fallidos.")
